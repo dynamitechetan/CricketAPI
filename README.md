@@ -27,4 +27,7 @@ This endpoint will return scorecard of {matchId}. <br>
    <br>
 This endpoint will return ball by ball commentary of {matchID}. <br>
 
-
+# Running and Setup
+  Tested on python 2.7 <br>
+  ```pip install -r requirements.txt``` <br>
+  ```python server.py```
