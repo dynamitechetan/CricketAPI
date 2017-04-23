@@ -34,3 +34,6 @@ This endpoint will return ball by ball commentary of {matchID}. <br>
   Tested on python 2.7 <br>
   ```pip install -r requirements.txt``` <br>
   ```python server.py```
+# Heroku
+  ```http://cricketapi.herokuapp.com/{endpoint}```<br>
+  eg. ```http://cricketapi.herokuapp.com/getMatches```
