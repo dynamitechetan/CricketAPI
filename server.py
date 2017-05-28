@@ -4,35 +4,35 @@ import json
 import sys
 from bs4 import BeautifulSoup
 from cricbuzz import Cricbuzz
-
+from flask import Response
 app = Flask(__name__)
 
 @app.route('/getMatches')
 def getMatches():
     c = Cricbuzz()
     list =  c.matches()
-    return jsonify(results=list)
+    return Response(json.dumps(list),  mimetype='application/json')
 
-@app.route('/liveScore')
+@app.route('/livescore')
 def getMatchInfo():
     matchId = request.args.get('matchId')
     c = Cricbuzz()
     list =  c.livescore(matchId)
-    return jsonify(results=list)
+    return Response(json.dumps(list),  mimetype='application/json')
 
 @app.route('/scorecard')
 def scorecard():
     matchId = request.args.get('matchId')
     c = Cricbuzz()
     list = c.scorecard(matchId)
-    return jsonify(results=list)
+    return Response(json.dumps(list),  mimetype='application/json')
 
 @app.route('/commentary')
 def commentary():
     matchId = request.args.get('matchId')
     c = Cricbuzz()
     list = c.commentary(matchId)
-    return jsonify(results=list)
+    return Response(json.dumps(list),  mimetype='application/json')
 
 if __name__ == '__main__':
     app.run(
