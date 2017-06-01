@@ -15,7 +15,7 @@ CricketAPI aims to provide free access to all cricket matches via API for all OD
 This endpoint will return list of all Live and Upcoming matches. <br>
 
 - liveScore <br>
-   ```http://localhost:1234/liveScore?matchId={matchID}``` 
+   ```http://localhost:1234/livescore?matchId={matchID}``` 
    <br>
 This endpoint will return live scores of {matchID}. <br>
 
